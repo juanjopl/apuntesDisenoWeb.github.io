@@ -1,0 +1,29 @@
+@import 'fuentes';
+@import 'colores';
+#navBar {
+    font-size: $tamañoNavItem;
+    background-color: $color-primario1;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.logo {
+    width: 5rem;
+}
+#opcionesNav {
+    padding-right: 5rem;
+    display: flex;
+    gap: 5rem;
+}
+#botonNav {
+    border: 2px solid transparent;
+    span {
+        color: whitesmoke;
+    }
+}
+@media (max-width: 1024px) {
+    #opcionesNav {
+        padding: 0;
+        gap: unset;
+        text-align: center;
+    }
+}
