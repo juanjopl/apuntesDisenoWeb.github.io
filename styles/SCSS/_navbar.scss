@@ -1,14 +1,22 @@
 @import 'colores';
+@import 'tamaños';
+
 .navbar {
     .container-fluid {
+        .navbar-brand {
+            font-size: $elementosNav;
+        }
         .collapse {
             margin-right: 10rem;
             .nav-item {
                 margin: 0 1rem 0 1rem;
                 border-radius: 5px;
+                .nav-link {
+                    font-size: $elementosNav;
+                }
                 &:hover {
                     background-color: $color-secundario;
-                    a {
+                    .nav-link {
                         color: $color-primario;
                     }
                 }

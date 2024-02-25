@@ -1,6 +1,27 @@
-@charset "UTF-8";
 @import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+p {
+  text-align: justify;
+}
+
+.navbar .container-fluid .navbar-brand {
+  font-size: 1.2em;
+}
 .navbar .container-fluid .collapse {
   margin-right: 10rem;
 }
@@ -8,10 +29,13 @@
   margin: 0 1rem 0 1rem;
   border-radius: 5px;
 }
+.navbar .container-fluid .collapse .nav-item .nav-link {
+  font-size: 1.2em;
+}
 .navbar .container-fluid .collapse .nav-item:hover {
   background-color: #F5F5F5;
 }
-.navbar .container-fluid .collapse .nav-item:hover a {
+.navbar .container-fluid .collapse .nav-item:hover .nav-link {
   color: #212529;
 }
 
@@ -27,7 +51,7 @@ footer .sobremi {
   justify-content: space-around;
   margin-right: 5rem;
 }
-footer .sobremi span a {
+footer .sobremi span .linkedinLink {
   background-color: #F5F5F5;
   padding: 0.2rem;
   border-radius: 5px;
@@ -35,7 +59,7 @@ footer .sobremi span a {
   font-weight: bold;
   text-decoration: none;
 }
-footer .sobremi span a:hover {
+footer .sobremi span .linkedinLink:hover {
   background-color: #414950;
   color: #F5F5F5;
 }
@@ -84,6 +108,7 @@ p {
   align-items: center;
 }
 .indice .list-group-item {
+  background-color: #F5F5F5;
   padding-right: 0px;
   width: 30rem;
 }
@@ -99,19 +124,20 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 3rem;
 }
 .botones-tema .accordion {
-  width: 50%;
+  width: 60%;
   background-color: #007bff;
-  color: #fff;
+  color: #FFFFFF;
   border-radius: 10px;
 }
 .botones-tema .accordion .accordion-item .accordion-button {
   background-color: #007bff;
-  color: #fff;
+  color: #FFFFFF;
 }
 .botones-tema .accordion .accordion-item .accordion-collapse .accordion-body {
+  background-color: #F5F5F5;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -122,24 +148,23 @@ p {
 }
 .botones-tema .secciones {
   text-align: center;
-  width: 50%;
+  width: 60%;
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
   background-color: #007bff;
-  color: #fff;
+  color: #FFFFFF;
   border: 1px solid #007bff;
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s, color 0.3s; /* Transición suave al hacer hover */
+  border-radius: 5px;
 }
 .botones-tema .secciones:hover {
-  background-color: #0056b3; /* Color de fondo del botón al hacer hover */
-  color: #fff; /* Color del texto del botón al hacer hover */
+  background-color: #0056b3;
+  color: #FFFFFF;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .indice .list-group-item {
-    width: 90%;
+    width: 100%;
   }
 }
 
