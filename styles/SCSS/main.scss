@@ -1,0 +1,80 @@
+@import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+@import 'colores';
+@import 'fuentes';
+@import 'navbar';
+@import 'footer';
+@import 'tamaños';
+* {
+    font-family: $fuente;
+    transition: all .2s ease;
+}
+//Index
+.indice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .list-group-item {
+        padding-right: 0px;
+        width: 30rem;
+        a {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+//temas
+.botones-tema {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .accordion {
+        width: 50%;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 10px;
+        .accordion-item {
+            .accordion-button {
+                background-color: #007bff;
+                color: #fff;
+            }
+            .accordion-collapse {
+                .accordion-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    .enlaceContenido {
+                        font-weight: bold;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .secciones {
+        text-align: center;
+        width: 50%;
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+        border-radius: 5px;  /* Bordes redondeados */
+        transition: background-color 0.3s, color 0.3s;  /* Transición suave al hacer hover */
+        &:hover {
+            background-color: #0056b3;  /* Color de fondo del botón al hacer hover */
+            color: #fff;  /* Color del texto del botón al hacer hover */
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .indice {
+        .list-group-item {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import 'colores';
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .sobremi {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 5rem;
+        span {
+            a {
+                background-color: $color-secundario;
+                padding: 0.2rem;
+                border-radius: 5px;
+                color: $color-primario;
+                font-weight: bold;
+                text-decoration: none;
+                &:hover {
+                    background-color: $color-primario-a2;
+                    color: $color-secundario;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    footer {
+        position: static;
+        bottom: auto;
+        margin-top: 10rem;
+        .sobremi {
+            margin-right: 0px;
+            flex-direction: column;
+            span {
+                padding: 0.2rem;
+            }
+        }
+    }
+}

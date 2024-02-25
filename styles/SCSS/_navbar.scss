@@ -1,0 +1,19 @@
+@import 'colores';
+.navbar {
+    .container-fluid {
+        .collapse {
+            margin-right: 10rem;
+            .nav-item {
+                margin: 0 1rem 0 1rem;
+                border-radius: 5px;
+                &:hover {
+                    background-color: $color-secundario;
+                    a {
+                        color: $color-primario;
+                    }
+                }
+            }
+
+        }
+    }
+}
