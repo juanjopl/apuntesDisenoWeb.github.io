@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  background-color: #FFEFB2;
+}
+
+nav {
+  background-color: #24574C;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+nav img {
+  margin-left: 30px;
+  width: 140px;
+  height: 140px;
+}
+nav .menuescritorio {
+  display: flex;
+  list-style: none;
+  align-self: center;
+}
+nav .menuescritorio li {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 30px 30px;
+}
+nav .menuescritorio li a {
+  width: 200px;
+  transition: color 0.3s ease;
+}
+nav .menuescritorio li a:hover {
+  color: #BDA447;
+  text-decoration: underline;
+}
+nav .menuescritorio .abrirmenu {
+  display: none;
+}
+nav .menuescritorio .abrirmenu span {
+  font-size: 30px;
+  cursor: pointer;
+}
+nav .menumovil {
+  list-style: none;
+}
+
+main {
+  justify-content: center;
+}
+main .fotocarta img {
+  width: 100%;
+  height: auto;
+}
+main .carta h1 {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+main .carta h2 {
+  margin: 20px 0 20px 0;
+  text-decoration: underline;
+}
+main .carta .hamburguesas, main .carta .postres, main .carta .bebidas, main .carta .pasteleria {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+main .carta .hamburguesas h2, main .carta .postres h2, main .carta .bebidas h2, main .carta .pasteleria h2 {
+  text-align: center;
+}
+main .carta .hamburguesas .hamb p, main .carta .hamburguesas .post p, main .carta .hamburguesas .beb p, main .carta .hamburguesas .past p, main .carta .postres .hamb p, main .carta .postres .post p, main .carta .postres .beb p, main .carta .postres .past p, main .carta .bebidas .hamb p, main .carta .bebidas .post p, main .carta .bebidas .beb p, main .carta .bebidas .past p, main .carta .pasteleria .hamb p, main .carta .pasteleria .post p, main .carta .pasteleria .beb p, main .carta .pasteleria .past p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+main .carta .hamburguesas .hamb ul, main .carta .hamburguesas .post ul, main .carta .hamburguesas .beb ul, main .carta .hamburguesas .past ul, main .carta .postres .hamb ul, main .carta .postres .post ul, main .carta .postres .beb ul, main .carta .postres .past ul, main .carta .bebidas .hamb ul, main .carta .bebidas .post ul, main .carta .bebidas .beb ul, main .carta .bebidas .past ul, main .carta .pasteleria .hamb ul, main .carta .pasteleria .post ul, main .carta .pasteleria .beb ul, main .carta .pasteleria .past ul {
+  display: flex;
+}
+main .carta .hamburguesas .hamb ul li img, main .carta .hamburguesas .post ul li img, main .carta .hamburguesas .beb ul li img, main .carta .hamburguesas .past ul li img, main .carta .postres .hamb ul li img, main .carta .postres .post ul li img, main .carta .postres .beb ul li img, main .carta .postres .past ul li img, main .carta .bebidas .hamb ul li img, main .carta .bebidas .post ul li img, main .carta .bebidas .beb ul li img, main .carta .bebidas .past ul li img, main .carta .pasteleria .hamb ul li img, main .carta .pasteleria .post ul li img, main .carta .pasteleria .beb ul li img, main .carta .pasteleria .past ul li img {
+  width: 50px;
+}
+
+footer {
+  background-color: #063026;
+  color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+footer .footer {
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+footer .footer .redes {
+  font-weight: bold;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+  nav img {
+    width: 100px;
+    height: 100px;
+  }
+  nav .menuescritorio li {
+    display: none;
+  }
+  nav .menuescritorio .abrirmenu {
+    display: flex;
+  }
+  nav .menumovil.mostrar {
+    background-color: #24574C;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+  }
+  nav .menumovil.mostrar li {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  nav .menumovil.mostrar.bounce-left {
+    animation: bounce-left 0.9s linear both;
+  }
+  @keyframes bounce-left {
+    0% {
+      transform: translateX(-48px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(-26px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateX(-13px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateX(-6.5px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateX(-4px);
+      animation-timing-function: ease-in;
+    }
+    25%, 55%, 75%, 87%, 98% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+  main h2 {
+    font-size: 16px;
+  }
+  main .fotocarta .texto {
+    font-size: 25px;
+  }
+  main .carta .hamburguesas h2, main .carta .postres h2, main .carta .bebidas h2, main .carta .pasteleria h2 {
+    font-size: 26px;
+  }
+  main .carta .hamburguesas h3, main .carta .postres h3, main .carta .bebidas h3, main .carta .pasteleria h3 {
+    font-size: 16px;
+  }
+  main .carta .hamburguesas p, main .carta .postres p, main .carta .bebidas p, main .carta .pasteleria p {
+    font-size: 13px;
+  }
+  main .carta .hamburguesas .hamb ul li img, main .carta .hamburguesas .post ul li img, main .carta .hamburguesas .beb ul li img, main .carta .hamburguesas .past ul li img, main .carta .postres .hamb ul li img, main .carta .postres .post ul li img, main .carta .postres .beb ul li img, main .carta .postres .past ul li img, main .carta .bebidas .hamb ul li img, main .carta .bebidas .post ul li img, main .carta .bebidas .beb ul li img, main .carta .bebidas .past ul li img, main .carta .pasteleria .hamb ul li img, main .carta .pasteleria .post ul li img, main .carta .pasteleria .beb ul li img, main .carta .pasteleria .past ul li img {
+    width: 40px;
+  }
+  footer {
+    height: 70px;
+  }
+  footer .footer .redes {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

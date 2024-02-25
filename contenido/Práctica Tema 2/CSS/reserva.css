@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+body {
+  margin: 0;
+  background-color: #FFEFB2;
+}
+
+nav {
+  background-color: #24574C;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+nav img {
+  margin-left: 30px;
+  width: 140px;
+  height: 140px;
+}
+nav .menuescritorio {
+  display: flex;
+  list-style: none;
+  align-self: center;
+}
+nav .menuescritorio li {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 30px 30px;
+}
+nav .menuescritorio li a {
+  width: 200px;
+  transition: color 0.3s ease;
+}
+nav .menuescritorio li a:hover {
+  color: #BDA447;
+  text-decoration: underline;
+}
+nav .menuescritorio .abrirmenu {
+  display: none;
+}
+nav .menuescritorio .abrirmenu span {
+  font-size: 30px;
+  cursor: pointer;
+}
+nav .menumovil {
+  list-style: none;
+}
+
+main .reserva {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+main .reserva img {
+  width: 100%;
+  height: auto;
+}
+main .reserva h2 {
+  color: #333;
+  text-align: center;
+}
+main .reserva .nombre label, main .reserva .fecha label, main .reserva .personas label, main .reserva .hora label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+main .reserva .nombre input, main .reserva .nombre select, main .reserva .fecha input, main .reserva .fecha select, main .reserva .personas input, main .reserva .personas select, main .reserva .hora input, main .reserva .hora select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+main .reserva button {
+  background-color: #063026;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #063026;
+  color: whitesmoke;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+footer .footer {
+  list-style: none;
+  display: flex;
+  align-self: center;
+}
+footer .footer .redes {
+  font-weight: bold;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+  nav img {
+    width: 100px;
+    height: 100px;
+  }
+  nav .menuescritorio li {
+    display: none;
+  }
+  nav .menuescritorio .abrirmenu {
+    display: flex;
+  }
+  nav .menumovil.mostrar {
+    background-color: #24574C;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+  }
+  nav .menumovil.mostrar li {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  nav .menumovil.mostrar.bounce-left {
+    animation: bounce-left 0.9s linear both;
+  }
+  @keyframes bounce-left {
+    0% {
+      transform: translateX(-48px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(-26px);
+      animation-timing-function: ease-in;
+    }
+    65% {
+      transform: translateX(-13px);
+      animation-timing-function: ease-in;
+    }
+    82% {
+      transform: translateX(-6.5px);
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: translateX(-4px);
+      animation-timing-function: ease-in;
+    }
+    25%, 55%, 75%, 87%, 98% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+    }
+    100% {
+      transform: translateX(0);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+  footer {
+    height: 70px;
+  }
+  footer .footer .redes {
+    font-size: 13px;
+    margin: 40px 40px;
+  }
+}
+
+/*# sourceMappingURL=reserva.css.map */

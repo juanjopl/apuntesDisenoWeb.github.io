@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+@import "colores";
+@import "fuentes";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: $colorletra2;
+}
+ul {
+    list-style: none;
+}
+body {
+    margin: 0;
+    background-color: $colorfondo;
+}
+nav {
+    background-color: $colorprimario;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    img {
+        margin-left: 30px;
+        width: 140px;
+        height: 140px;
+    }
+    .menuescritorio {
+        display: flex;
+        list-style: none;
+        align-self: center;
+        li {
+            color: $colorletra2;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 30px 30px;
+            a {
+                width: 200px;
+                transition: color .3s ease;
+            }
+            a:hover {
+                color:$colorsecundario;
+                text-decoration: underline;
+            }
+        }
+        .abrirmenu {
+            display: none;
+            span {
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+    .menumovil {
+        list-style: none;
+    }
+}
+
+main {
+    justify-content: center;
+    .fotocarta {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .carta {
+        h1 {
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+        h2 {
+            margin: 20px 0 20px 0;
+            text-decoration: underline;
+        }
+        .hamburguesas,.postres,.bebidas,.pasteleria {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            h2 {
+                text-align: center;
+            }
+            .hamb,.post,.beb,.past {
+                p {
+                    text-align: justify;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                ul {
+                    display: flex;
+                    li {
+                        img {
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $colorpie;
+    color: $colorletra2;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    .footer {
+        list-style: none;
+        display: flex;
+        align-self: center;
+        .redes {
+            font-weight: bold;
+            margin-left: 80px;
+            margin-right: 80px;
+            font-size: $web;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .menuescritorio {
+            li {
+                display: none;
+            }
+            .abrirmenu {
+                display: flex;
+            }
+        }
+        .menumovil.mostrar {
+            background-color: $colorprimario;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 100px;
+            li {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                font-size: $titulo3;
+            }
+            &.bounce-left{animation:bounce-left .9s linear both} @keyframes bounce-left{0%{transform:translateX(-48px);animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{transform:translateX(-26px);animation-timing-function:ease-in}65%{transform:translateX(-13px);animation-timing-function:ease-in}82%{transform:translateX(-6.5px);animation-timing-function:ease-in}93%{transform:translateX(-4px);animation-timing-function:ease-in}25%,55%,75%,87%,98%{transform:translateX(0);animation-timing-function:ease-out}100%{transform:translateX(0);animation-timing-function:ease-out;opacity:1}}
+        }   
+    
+    }
+    main {
+        h2 {
+            font-size: $titulo3;
+        }
+        .fotocarta {
+            .texto {
+                font-size: 25px;
+            }
+        }
+        .carta {
+            .hamburguesas,.postres,.bebidas,.pasteleria {
+                h2 {
+                    font-size: $titulo2;
+                }
+                h3 {
+                    font-size: $titulo3;
+                }
+                p {
+                    font-size: $web;
+                }
+                .hamb,.post,.beb,.past {
+                    ul {
+                        li {
+                            img {
+                                width: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        height: 70px;
+        .footer {
+            .redes {
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+        }
+    }
+}

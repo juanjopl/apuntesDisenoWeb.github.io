@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Distrito</title>
+    <link rel="icon" href="img/logonegro.png">
+    <link rel="stylesheet" href="CSS/reserva.css">
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png">
+        <ul class="menuescritorio">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
+            <li class="abrirmenu" id="abrirmenu"><span class="material-symbols-outlined">☰</span>
+                <ul class="menumovil bounce-left">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="reserva.html">Reservar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="reserva">
+            <h2>HAZ TU RESERVA</h2>
+            <div class="nombre">
+                <label>Nombre</label>
+                <input type="text">
+            </div>
+            <div class="fecha">
+                <label>Fecha</label>
+                <input type="date" id="date">
+            </div>
+            <div class="personas">
+                <label>Personas</label>
+                <select id="personas">
+                    <option disabled selected>Elige</option>
+                </select>
+            </div>
+            <div class="hora">
+                <label>Hora</label>
+                <select id="horas">
+                    <option disabled selected>Elige</option>
+                </select>
+            </div>
+            <button>RESERVAR</button>
+        </div>
+    </main>
+    <footer>
+        <ul class="footer">
+            <li class="redes"><a href="#">Instagram</a></li>
+            <li class="redes"><a href="#">TikTok</a></li>
+            <li class="redes"><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+<script>
+    let abrirmenu = document.getElementById("abrirmenu");
+    abrirmenu.addEventListener("click", () => {
+        let menumovil = document.querySelector(".menumovil");
+        menumovil.classList.toggle("mostrar");
+    });
+
+    let select = document.getElementById('personas');
+    select.addEventListener('click',function() {
+        while (select.options.length > 0) {
+        select.remove(0);
+        }
+        for (let i = 1; i <= 10; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.text = i;
+        select.add(option);
+      }
+    });
+
+    let select2 = document.getElementById('horas');
+    select2.addEventListener('click',function() {
+        while (select2.options.length > 0) {
+        select2.remove(0);
+        }
+
+        let horas = ['13:00', '13:15', '13:30', '13:45','14:00', '14:15', '14:30', '14:45', '15:00', '15:15', '15:30'];
+
+        for (const hora of horas) {
+        const option = document.createElement('option');
+        option.value = hora;
+        option.text = hora;
+        select2.add(option);
+        }
+    })
+
+    const date = document.getElementById('date');
+    const fechaActual = new Date().toISOString().split('T')[0];
+    date.value = fechaActual;
+
+</script>
+</body>
+</html>
