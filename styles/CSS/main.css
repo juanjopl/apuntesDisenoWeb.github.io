@@ -112,10 +112,11 @@ p {
   padding-right: 0px;
   width: 30rem;
 }
-.indice .list-group-item a {
+.indice .list-group-item .list-group-link {
   text-align: center;
   font-weight: bold;
   text-decoration: none;
+  color: #212529;
 }
 
 .botones-tema {
@@ -128,12 +129,12 @@ p {
 }
 .botones-tema .accordion {
   width: 60%;
-  background-color: #007bff;
+  background-color: #414950;
   color: #FFFFFF;
   border-radius: 10px;
 }
 .botones-tema .accordion .accordion-item .accordion-button {
-  background-color: #007bff;
+  background-color: #414950;
   color: #FFFFFF;
 }
 .botones-tema .accordion .accordion-item .accordion-collapse .accordion-body {
@@ -143,6 +144,7 @@ p {
   gap: 1.5rem;
 }
 .botones-tema .accordion .accordion-item .accordion-collapse .accordion-body .enlaceContenido {
+  color: #212529;
   font-weight: bold;
   text-decoration: none;
 }
@@ -152,13 +154,12 @@ p {
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  background-color: #007bff;
+  background-color: #414950;
   color: #FFFFFF;
-  border: 1px solid #007bff;
   border-radius: 5px;
 }
 .botones-tema .secciones:hover {
-  background-color: #0056b3;
+  background-color: #0D1620;
   color: #FFFFFF;
 }
 

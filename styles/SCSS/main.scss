@@ -4,6 +4,7 @@
 @import 'navbar';
 @import 'footer';
 @import 'tamaños';
+
 * {
     font-family: $fuente;
     transition: all .2s ease;
@@ -17,14 +18,15 @@
         background-color: $color-secundario;
         padding-right: 0px;
         width: 30rem;
-        a {
+        .list-group-link {
             text-align: center;
             font-weight: bold;
             text-decoration: none;
+            color: $color-primario;
         }
     }
 }
-//temas
+//Temas
 .botones-tema {
     margin-top: 10rem;
     display: flex;
@@ -34,12 +36,12 @@
     gap: 3rem;
     .accordion {
         width: 60%;
-        background-color: #007bff;
+        background-color: $color-primario-a2;
         color: $color-secundario-a1;
         border-radius: 10px;
         .accordion-item {
             .accordion-button {
-                background-color: #007bff;
+                background-color: $color-primario-a2;
                 color: $color-secundario-a1;
             }
             .accordion-collapse {
@@ -49,6 +51,7 @@
                     flex-direction: column;
                     gap: 1.5rem;
                     .enlaceContenido {
+                        color: $color-primario;
                         font-weight: bold;
                         text-decoration: none;
                     }
@@ -62,12 +65,11 @@
         display: inline-block;
         padding: 10px 20px;
         text-decoration: none;
-        background-color: #007bff;
+        background-color: $color-primario-a2;
         color: $color-secundario-a1;
-        border: 1px solid #007bff;
         border-radius: 5px;
         &:hover {
-            background-color: #0056b3;
+            background-color: $color-primario-b2;
             color: $color-secundario-a1;
         }
     }
